@@ -9,9 +9,30 @@
 data="MOCK_DATA.csv";
 exec < $data;
 read header;
-if ! [[ $(( grep -c "$1,$2,$3,$4,$5" $data )) = 1 ]]
+count=$( grep -c "$1,$2,$3,$4,$5" $data );
+echo $count
+if [[ $count -eq 0 ]]
 then
 echo "$1,$2,$3,$4,$5" >> $data;
 else
 echo "user already exists!";
 fi
+
+
+#logic for returning info from file
+#if FLAG FOR RETURNING INFO INSTEAD OF INPUTTING INFO
+#take in username and password(username will be unique identifier)
+#output full line
+
+#grep "$1,$2" $data
+#while getopts 'a' OPTION; do
+  #case "$OPTION" in
+    #a)
+      #grep "$1,$2" $data
+     # ;;
+    #?)
+   #   echo "ERROR: invalid option applied"
+  #    ;;
+ # esac
+#done
+#shift "$(($OPTIND -1))"
