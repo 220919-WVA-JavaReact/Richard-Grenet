@@ -10,6 +10,11 @@ CREATE TABLE courses (
 	generaltopic int REFERENCES topics
 );
 
+CREATE TABLE topic_courses (
+	topicid int REFERENCES topics,
+	coursetitle varchar(30) REFERENCES courses
+);
+
 CREATE TABLE teachers (
 	teacherid serial PRIMARY KEY,
 	"name" varchar(30),
@@ -30,6 +35,7 @@ CREATE TABLE student_courses (
 	studentid int REFERENCES students,
 	coursetitle varchar(30) REFERENCES courses
 );
+
 
 INSERT INTO topics ("name") VALUES ('Math'),('History'),('English'),('Science');
 INSERT INTO teachers ("name", phonenumber, email) VALUES 
@@ -64,7 +70,12 @@ INSERT INTO student_courses VALUES
 	(4,'Math 104'),
 	(5,'English 68');
 
+INSERT INTO topic_courses VALUES
+	(1,'Math 104'),
+	(2,'History 435'),
+	(3,'English 68');
+
 
 ALTER TABLE teachers ALTER COLUMN phonenumber TYPE varchar;	
-
+ALTER TABLE courses DROP COLUMN generaltopic;
 
