@@ -14,6 +14,7 @@ body {
 
 main {
     text-align: center;
+    margin:.75rem 0;
 }
 #greeting-section *{
     margin-top: .75rem;
