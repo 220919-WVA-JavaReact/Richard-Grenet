@@ -1,0 +1,26 @@
+ul {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: auto;
+    list-style: none;
+}
+#ttaal-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#ttaal-container li {
+    margin-top: 1rem;
+    border: .25rem solid black;
+    border-radius: .25rem;
+    padding: .75rem;
+}
+
+#ttaal-container li * {
+    margin-top: .75rem;
+}
+
+#ttaal-container li p {
+    font-size: 1.25rem;
+}

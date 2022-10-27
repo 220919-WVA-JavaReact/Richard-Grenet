@@ -1,0 +1,29 @@
+#aboutme-section {
+    max-width: 600px;
+    margin: 0 auto;
+}
+ul {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: auto;
+    list-style: none;
+}
+#descrip-container li {
+    margin-top: 1rem;
+    border: .25rem solid black;
+    border-radius: .25rem;
+    padding: .75rem;
+}
+#descrip-container li * {
+    margin-top: .75rem;
+}
+#descrip-container li p {
+    font-size: 1.25rem;
+}
+
+li img {
+    width: 100%;
+
+}
+
